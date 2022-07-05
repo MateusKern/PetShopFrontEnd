@@ -9,7 +9,6 @@
       <ul class="list-unstyled components">
           <li class="active">
               <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                  <i class="fas fa-home"></i>
                   Home
               </a>
               <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -26,11 +25,9 @@
           </li>
           <li>
               <a href="#">
-                  <i class="fas fa-briefcase"></i>
                   About
               </a>
               <a style="cursor: pointer;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsedPages" aria-controls="collapsePages">
-                  <i class="fas fa-copy"></i>
                   Pages
               </a>
               <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsedPages">
