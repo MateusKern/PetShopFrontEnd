@@ -6,13 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { BaseComponent } from './base/base.component';
+import { HomeComponent } from './home/home.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { ServicoComponent } from './servico/servico.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { ColaboradorComponent } from './colaborador/colaborador.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [									
     AppComponent,
     BaseComponent,
-    LoginComponent
-  ],
+    LoginComponent,
+    HomeComponent,
+    SobreComponent,
+    ProdutoComponent,
+    ServicoComponent,
+    ClienteComponent,
+    ColaboradorComponent
+   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
