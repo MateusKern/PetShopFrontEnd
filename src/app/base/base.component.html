@@ -2,43 +2,37 @@
   <!-- Sidebar  -->
   <nav id="sidebar" [ngClass]="{'active' : sideBar}">
     <div class="sidebar-header">
-      <h3>Bootstrap Sidebar</h3>
-      <strong>BS</strong>
+      <h3>Dog Style</h3>
+      <strong>DS</strong>
     </div>
-    
+
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+        <a href="/home">
           Home
         </a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
-          <li>
-            <a href="#">Home 1</a>
-          </li>
-          <li>
-            <a href="#">Home 2</a>
-          </li>
-          <li>
-            <a href="#">Home 3</a>
-          </li>
-        </ul>
       </li>
       <li>
-        <a href="#">
-          About
+        <a href="/sobre">
+          Sobre
         </a>
+      </li>
+      <li>
         <a style="cursor: pointer;" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsedPages" aria-controls="collapsePages">
-          Pages
+          Páginas
         </a>
         <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsedPages">
           <li>
-            <a href="#">Page 1</a>
+            <a href="/produtos">Produtos</a>
           </li>
           <li>
-            <a href="#">Page 2</a>
+            <a href="/servicos">Serviços</a>
           </li>
           <li>
-            <a href="#">Page 3</a>
+            <a href="/clientes">Clientes</a>
+          </li>
+          <li>
+            <a href="/colaboradores">Colaboradores</a>
           </li>
         </ul>
       </li>
@@ -50,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <button type="button" id="sidebarCollapse" class="btn btn-info" (click)="sidebarCollapseClick()">
-          <span>Toggle Sidebar</span>
+          <span>{{sideBar ? 'Abrir' : 'Fechar'}} Menu</span>
         </button>
       </div>
     </nav>
