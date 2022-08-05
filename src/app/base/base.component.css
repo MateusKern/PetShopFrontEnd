@@ -104,6 +104,10 @@ span {
     padding: 10px !important;
 }
 
+#sidebar .dropdown-toggle {
+    cursor: pointer;
+}
+
 #sidebar.active .dropdown-toggle::after {
     top: auto;
     bottom: 10px;

@@ -9,27 +9,28 @@ import { LoginComponent } from "./login/login.component";
 import { ProdutoComponent } from "./produto/produto.component";
 import { ServicoComponent } from "./servico/servico.component";
 import { SobreComponent } from "./sobre/sobre.component";
+import { rotas } from "./core/rotas";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: rotas.login, component: LoginComponent },
   { path: '', component: BaseComponent, children: [
-    { path: 'home', component: HomeComponent },
-    { path: 'sobre', component: SobreComponent },
-    { path: 'produtos', component: ProdutoComponent },
-    { path: 'servicos', component: ServicoComponent },
-    { path: 'clientes', component: ClienteComponent },
-    { path: 'colaboradores', component: ColaboradorComponent }
+    { path: rotas.home, component: HomeComponent },
+    { path: rotas.sobre, component: SobreComponent },
+    { path: rotas.produtos, component: ProdutoComponent },
+    { path: rotas.servicos, component: ServicoComponent },
+    { path: rotas.clientes, component: ClienteComponent },
+    { path: rotas.colaboradores, component: ColaboradorComponent }
   ]},
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '', redirectTo: rotas.login, pathMatch: 'full' },
+  { path: '**', redirectTo: rotas.login, pathMatch: 'full' }
 ]
 
 @NgModule({
-    imports: [
-      CommonModule,
-      RouterModule.forRoot(routes),
-    ],
-    exports: [RouterModule],
-  })
-  export class AppRoutingModule {
-  }  
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes),
+  ],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {
+}
