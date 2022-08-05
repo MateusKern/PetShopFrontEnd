@@ -11,6 +11,7 @@ export const menu = [
     },
     {
         descricao: 'Páginas',
+        isCollapsed: true,
         submenus: [
             {
                 descricao: 'Produtos',

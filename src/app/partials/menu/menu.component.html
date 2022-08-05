@@ -5,30 +5,28 @@
   </div>
 
   <ul class="list-unstyled components">
-    <li class="active">
-      <a routerLink="/home">Home</a>
-    </li>
-    <li>
-      <a routerLink="/sobre">Sobre</a>
-    </li>
-    <li>
-      <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsedPages" aria-controls="collapsePages">
-        Páginas
-      </a>
-      <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsedPages">
-        <li>
-          <a routerLink="/produtos">Produtos</a>
-        </li>
-        <li>
-          <a routerLink="/servicos">Serviços</a>
-        </li>
-        <li>
-          <a routerLink="/clientes">Clientes</a>
-        </li>
-        <li>
-          <a routerLink="/colaboradores">Colaboradores</a>
-        </li>
-      </ul>
-    </li>
+    <ng-container *ngFor="let menu of menus">
+      <ng-container *ngIf="!menu.submenus" [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
+      <ng-container *ngIf="menu.submenus" [ngTemplateOutlet]="subMenuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
+    </ng-container>
   </ul>
 </nav>
+
+<ng-template #menuItemTemplate let-item="item" let-parentItem="parentItem">
+  <li>
+    <a [routerLink]="'/'+item.pagina">{{item.descricao}}</a>
+  </li>
+</ng-template>
+
+<ng-template #subMenuItemTemplate let-item="item" let-parentItem="parentItem">
+  <li>
+    <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!item.isCollapsed" aria-controls="collapsePages">
+      {{item.descricao}}
+    </a>
+    <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="item.isCollapsed">
+      <ng-container *ngFor="let menu of item.submenus">
+        <ng-container [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
+      </ng-container>
+    </ul>
+  </li>
+</ng-template>

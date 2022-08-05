@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { menu } from 'src/app/core/menu';
 
 @Component({
   selector: 'app-menu',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  isCollapsedPages: boolean = true;
   sideBar: boolean = false;
+  menus: any[] = menu;
 
   constructor() { }
 
