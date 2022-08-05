@@ -17,7 +17,7 @@
 </ng-template>
 
 <ng-template #menuItemTemplate let-item="item">
-  <li [ngClass]="{'active': verificaSeEstaNessaRota(item.pagina)}">
+  <li [ngClass]="{'active': verifyIfThisRoute(item.pagina)}">
     <a [routerLink]="'/'+item.pagina">{{item.descricao}}</a>
   </li>
 </ng-template>
