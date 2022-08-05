@@ -6,26 +6,30 @@
 
   <ul class="list-unstyled components">
     <ng-container *ngFor="let menu of menus">
-      <ng-container *ngIf="!menu.submenus" [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
-      <ng-container *ngIf="menu.submenus" [ngTemplateOutlet]="subMenuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
+      <ng-container [ngTemplateOutlet]="linkTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
     </ng-container>
   </ul>
 </nav>
 
-<ng-template #menuItemTemplate let-item="item" let-parentItem="parentItem">
-  <li>
+<ng-template #linkTemplate let-item="item">
+  <ng-container *ngIf="!item.submenus" [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+  <ng-container *ngIf="item.submenus" [ngTemplateOutlet]="subMenuItemTemplate" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+</ng-template>
+
+<ng-template #menuItemTemplate let-item="item">
+  <li [ngClass]="{'active': verificaSeEstaNessaRota(item.pagina)}">
     <a [routerLink]="'/'+item.pagina">{{item.descricao}}</a>
   </li>
 </ng-template>
 
-<ng-template #subMenuItemTemplate let-item="item" let-parentItem="parentItem">
+<ng-template #subMenuItemTemplate let-item="item">
   <li>
     <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!item.isCollapsed" aria-controls="collapsePages">
       {{item.descricao}}
     </a>
     <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="item.isCollapsed">
       <ng-container *ngFor="let menu of item.submenus">
-        <ng-container [ngTemplateOutlet]="menuItemTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
+        <ng-container [ngTemplateOutlet]="linkTemplate" [ngTemplateOutletContext]="{ item: menu }"></ng-container>
       </ng-container>
     </ul>
   </li>

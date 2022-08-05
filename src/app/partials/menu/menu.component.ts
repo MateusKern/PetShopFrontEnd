@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { menu } from 'src/app/core/menu';
 
 @Component({
@@ -10,13 +11,17 @@ export class MenuComponent implements OnInit {
   sideBar: boolean = false;
   menus: any[] = menu;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   sidebarCollapseClick() {
     this.sideBar = !this.sideBar;
+  }
+
+  verificaSeEstaNessaRota(rota: string): boolean {
+    return this.router.url.endsWith('/' + rota);
   }
 
 }
