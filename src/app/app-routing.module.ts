@@ -1,14 +1,14 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { BaseComponent } from "./base/base.component";
-import { ClienteComponent } from "./cliente/cliente.component";
-import { ColaboradorComponent } from "./colaborador/colaborador.component";
-import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./login/login.component";
-import { ProdutoComponent } from "./produto/produto.component";
-import { ServicoComponent } from "./servico/servico.component";
-import { SobreComponent } from "./sobre/sobre.component";
+import { BaseComponent } from "./pages/base/base.component";
+import { ClienteComponent } from "./pages/cliente/cliente.component";
+import { ColaboradorComponent } from "./pages/colaborador/colaborador.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { ProdutoComponent } from "./pages/produto/produto.component";
+import { ServicoComponent } from "./pages/servico/servico.component";
+import { SobreComponent } from "./pages/sobre/sobre.component";
 import { rotas } from "./core/rotas";
 
 const routes: Routes = [

@@ -4,14 +4,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { BaseComponent } from './base/base.component';
-import { HomeComponent } from './home/home.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { ProdutoComponent } from './produto/produto.component';
-import { ServicoComponent } from './servico/servico.component';
-import { ClienteComponent } from './cliente/cliente.component';
-import { ColaboradorComponent } from './colaborador/colaborador.component';
+import { LoginComponent } from './pages/login/login.component';
+import { BaseComponent } from './pages/base/base.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
+import { ProdutoComponent } from './pages/produto/produto.component';
+import { ServicoComponent } from './pages/servico/servico.component';
+import { ClienteComponent } from './pages/cliente/cliente.component';
+import { ColaboradorComponent } from './pages/colaborador/colaborador.component';
 import { MenuComponent } from './partials/menu/menu.component';
 
 @NgModule({
