@@ -20,7 +20,7 @@ export class MenuComponent implements OnInit {
     this.sideBar = !this.sideBar;
   }
 
-  verificaSeEstaNessaRota(rota: string): boolean {
+  verifyIfThisRoute(rota: string): boolean {
     return this.router.url.endsWith('/' + rota);
   }
 
