@@ -17,15 +17,15 @@
 </ng-template>
 
 <ng-template #menuItemTemplate let-item="item">
-  <li [ngClass]="{'active': verifyIfThisRoute(item.pagina)}">
-    <a [routerLink]="'/'+item.pagina">{{item.descricao}}</a>
+  <li [ngClass]="{'active': verifyIfThisRoute(item.page)}">
+    <a [routerLink]="'/'+item.page">{{item.description}}</a>
   </li>
 </ng-template>
 
 <ng-template #subMenuItemTemplate let-item="item">
   <li>
     <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" (click)="collapse.toggle()" [attr.aria-expanded]="!item.isCollapsed" aria-controls="collapsePages">
-      {{item.descricao}}
+      {{item.description}}
     </a>
     <ul class="collapse list-unstyled" #collapse="ngbCollapse" [(ngbCollapse)]="item.isCollapsed">
       <ng-container *ngFor="let menu of item.submenus">

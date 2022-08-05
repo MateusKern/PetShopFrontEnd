@@ -2,32 +2,32 @@ import { rotas } from "./rotas";
 
 export const menu = [
     {
-        descricao: 'Home',
-        pagina: rotas.home
+        description: 'Home',
+        page: rotas.home
     },
     {
-        descricao: 'Sobre',
-        pagina: rotas.sobre
+        description: 'Sobre',
+        page: rotas.sobre
     },
     {
-        descricao: 'Páginas',
+        description: 'Páginas',
         isCollapsed: true,
         submenus: [
             {
-                descricao: 'Produtos',
-                pagina: rotas.produtos
+                description: 'Produtos',
+                page: rotas.produtos
             },
             {
-                descricao: 'Serviços',
-                pagina: rotas.servicos
+                description: 'Serviços',
+                page: rotas.servicos
             },
             {
-                descricao: 'Clientes',
-                pagina: rotas.clientes
+                description: 'Clientes',
+                page: rotas.clientes
             },
             {
-                descricao: 'Colaboradores',
-                pagina: rotas.colaboradores
+                description: 'Colaboradores',
+                page: rotas.colaboradores
             },
         ]
     },
