@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  isCollapsedPages: boolean = true;
+  sideBar: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sidebarCollapseClick() {
+    this.sideBar = !this.sideBar;
   }
 
 }

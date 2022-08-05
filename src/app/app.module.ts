@@ -12,6 +12,7 @@ import { ProdutoComponent } from './produto/produto.component';
 import { ServicoComponent } from './servico/servico.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ColaboradorComponent } from './colaborador/colaborador.component';
+import { MenuComponent } from './partials/menu/menu.component';
 
 @NgModule({
   declarations: [									
@@ -23,7 +24,8 @@ import { ColaboradorComponent } from './colaborador/colaborador.component';
     ProdutoComponent,
     ServicoComponent,
     ClienteComponent,
-    ColaboradorComponent
+    ColaboradorComponent,
+    MenuComponent
    ],
   imports: [
     AppRoutingModule,
