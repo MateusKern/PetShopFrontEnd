@@ -9,7 +9,7 @@ import { LoginComponent } from "./pages/login/login.component";
 import { ProdutoComponent } from "./pages/produto/produto.component";
 import { ServicoComponent } from "./pages/servico/servico.component";
 import { SobreComponent } from "./pages/sobre/sobre.component";
-import { rotas } from "./core/rotas";
+import { rotas } from "./core/constants/rotas";
 
 const routes: Routes = [
   { path: rotas.login, component: LoginComponent },

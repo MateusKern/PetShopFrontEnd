@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { rotas } from 'src/app/core/rotas';
+import { rotas } from 'src/app/core/constants/rotas';
 
 @Component({
   selector: 'app-base',
