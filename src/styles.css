@@ -159,6 +159,10 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
+.dropdown-toggle-without-after::after {
+    display: none !important;
+}
+
 .dropdown-toggle::after {
     display: block;
     position: absolute;

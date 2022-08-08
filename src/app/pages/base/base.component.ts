@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { rotas } from 'src/app/core/rotas';
 
 @Component({
   selector: 'app-base',
@@ -6,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./base.component.css']
 })
 export class BaseComponent implements OnInit {
-  isCollapsed: boolean = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.router.navigate(['/'+rotas.login]);
   }
 }
