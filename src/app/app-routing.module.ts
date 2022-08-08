@@ -10,10 +10,11 @@ import { ProdutoComponent } from "./pages/produto/produto.component";
 import { ServicoComponent } from "./pages/servico/servico.component";
 import { SobreComponent } from "./pages/sobre/sobre.component";
 import { rotas } from "./core/constants/rotas";
+import { AuthGuard } from "./core/guards/auth.guard";
 
 const routes: Routes = [
   { path: rotas.login, component: LoginComponent },
-  { path: '', component: BaseComponent, children: [
+  { path: '', component: BaseComponent, canActivate: [AuthGuard], children: [
     { path: rotas.home, component: HomeComponent },
     { path: rotas.sobre, component: SobreComponent },
     { path: rotas.produtos, component: ProdutoComponent },
