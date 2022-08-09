@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.authService.login(Object.assign({}, this.loginForm.getRawValue())).subscribe(() => {
     }, error => {
+      console.log(error)
       alert('Login or password wrong!')
     }, () => {
       this.router.navigate(['/'+ rotas.home])

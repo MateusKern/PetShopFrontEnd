@@ -22,9 +22,7 @@ const routes: Routes = [
     { path: rotas.clientes, component: ClienteComponent },
     { path: rotas.colaboradores, component: ColaboradorComponent },
     { path: '', redirectTo: rotas.home, pathMatch: 'full' }
-  ]},
-  { path: '', redirectTo: rotas.login, pathMatch: 'full' },
-  { path: '**', redirectTo: rotas.login, pathMatch: 'full' }
+  ]}
 ]
 
 @NgModule({
