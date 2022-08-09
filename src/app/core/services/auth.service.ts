@@ -5,7 +5,9 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Login } from '../models/user/login';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+  })
 export class AuthService {
     private url = environment.apiUrl
     private STR_TOKEN = 'TOKEN'

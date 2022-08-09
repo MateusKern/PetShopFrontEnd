@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { BaseComponent } from './pages/base/base.component';
@@ -30,7 +32,10 @@ import { MenuComponent } from './partials/menu/menu.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    NgbModule
+    FormsModule,
+    HttpClientModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [
