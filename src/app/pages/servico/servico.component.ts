@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Result } from 'src/app/core/models/results/result';
+import { Servico } from 'src/app/core/models/servico/servico';
 import { ServicoService } from 'src/app/core/services/servico.service';
 
 @Component({
@@ -8,13 +9,13 @@ import { ServicoService } from 'src/app/core/services/servico.service';
   styleUrls: ['./servico.component.css']
 })
 export class ServicoComponent implements OnInit {
-  servicos: any[] = []
+  servicos: Servico[] = []
 
   constructor(private servicoService: ServicoService) { }
 
   ngOnInit() {
     this.servicoService.pegarLista().subscribe({
-      next: (result: Result<any>) => this.servicos = result.retorno,
+      next: (result: Result<Servico[]>) => this.servicos = result.retorno,
       error: (result: Result<any>) => alert(result)
     });
   }

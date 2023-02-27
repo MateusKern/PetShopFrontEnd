@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Result } from '../models/results/result';
+import { Servico } from '../models/servico/servico';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ServicoService {
 
   constructor(private http: HttpClient) { }
 
-  pegarLista(): Observable<Result<any>> {
-    return this.http.get<Result<any>>(this.url)
+  pegarLista(): Observable<Result<Servico[]>> {
+    return this.http.get<Result<Servico[]>>(this.url)
   }
 }
