@@ -15,6 +15,12 @@ import { ServicoComponent } from './pages/servico/servico.component';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { ColaboradorComponent } from './pages/colaborador/colaborador.component';
 import { MenuComponent } from './partials/menu/menu.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
+
+export function tokenGetter() {
+  return localStorage.getItem('TOKEN')
+}
 
 @NgModule({
   declarations: [									
@@ -34,6 +40,12 @@ import { MenuComponent } from './partials/menu/menu.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter,
+        allowedDomains: [environment.apiUrlJwtToken]
+      }
+    }),
     NgbModule,
     ReactiveFormsModule
   ],
