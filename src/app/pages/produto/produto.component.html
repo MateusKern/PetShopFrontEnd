@@ -1,3 +1,17 @@
-<p>
-  produto works!
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Produto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let produto of produtos">
+      <td>{{produto.id}}</td>
+      <td>
+        <p><strong>{{produto.nome}} - {{produto.preco | currency:'BRL'}}</strong></p>
+        <small>{{produto.descricao}}</small>
+      </td>
+    </tr>
+  </tbody>
+</table>
