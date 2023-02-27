@@ -15,12 +15,12 @@ import { AuthGuard } from "./core/guards/auth.guard";
 const routes: Routes = [
   { path: rotas.login, component: LoginComponent },
   { path: '', component: BaseComponent, canActivate: [AuthGuard], children: [
-    { path: rotas.home, component: HomeComponent },
-    { path: rotas.sobre, component: SobreComponent },
-    { path: rotas.produtos, component: ProdutoComponent },
-    { path: rotas.servicos, component: ServicoComponent },
-    { path: rotas.clientes, component: ClienteComponent },
-    { path: rotas.colaboradores, component: ColaboradorComponent },
+    { path: rotas.home, component: HomeComponent, data: {titulo: 'Home'}},
+    { path: rotas.sobre, component: SobreComponent, data: {titulo: 'Sobre'} },
+    { path: rotas.produtos, component: ProdutoComponent, data: {titulo: 'Produtos'} },
+    { path: rotas.servicos, component: ServicoComponent, data: {titulo: 'Serviços'} },
+    { path: rotas.clientes, component: ClienteComponent, data: {titulo: 'Clientes'} },
+    { path: rotas.colaboradores, component: ColaboradorComponent, data: {titulo: 'Colaboradores'} },
     { path: '', redirectTo: rotas.home, pathMatch: 'full' }
   ]}
 ]
