@@ -20,4 +20,20 @@ export class ClienteComponent implements OnInit {
     });
   }
 
+  retornaEmojiPet(tipo?: string): string {
+    switch (tipo) {
+      case 'Cachorro':
+        return '&#128054;';
+      case 'Gato':
+        return '&#128049;';
+      case 'Passaro':
+        return '&#128038;';
+      case 'Peixe':
+        return '&#128031;';
+      case 'Tartaruga':
+        return '&#128034;';
+      default:
+        return 'pet';
+    }
+  }
 }
