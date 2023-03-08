@@ -11,6 +11,7 @@ import { ServicoComponent } from "./pages/servico/servico.component";
 import { SobreComponent } from "./pages/sobre/sobre.component";
 import { rotas } from "./core/constants/rotas";
 import { AuthGuard } from "./core/guards/auth.guard";
+import { VendasComponent } from "./pages/vendas/vendas.component";
 
 const routes: Routes = [
   { path: rotas.login, component: LoginComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
     { path: rotas.servicos, component: ServicoComponent, data: {titulo: 'Serviços'} },
     { path: rotas.clientes, component: ClienteComponent, data: {titulo: 'Clientes'} },
     { path: rotas.colaboradores, component: ColaboradorComponent, data: {titulo: 'Colaboradores'} },
+    { path: rotas.vendas, component: VendasComponent, data: {titulo: 'Vendas'} },
     { path: '', redirectTo: rotas.home, pathMatch: 'full' }
   ]}
 ]

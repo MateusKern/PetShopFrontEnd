@@ -29,6 +29,10 @@ export const menu = [
                 description: 'Colaboradores',
                 page: rotas.colaboradores
             },
+            {
+                description: 'Vendas',
+                page: rotas.vendas
+            },
         ]
     },
 ]

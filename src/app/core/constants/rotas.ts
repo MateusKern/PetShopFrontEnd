@@ -5,5 +5,6 @@ export const rotas = {
     produtos: 'produtos',
     servicos: 'servicos',
     clientes: 'clientes',
-    colaboradores: 'colaboradores'
+    colaboradores: 'colaboradores',
+    vendas: 'vendas'
 }
