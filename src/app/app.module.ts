@@ -17,6 +17,7 @@ import { ColaboradorComponent } from './pages/colaborador/colaborador.component'
 import { MenuComponent } from './partials/menu/menu.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment';
+import { VendasComponent } from './pages/vendas/vendas.component';
 
 export function tokenGetter() {
   return localStorage.getItem('TOKEN')
@@ -33,6 +34,7 @@ export function tokenGetter() {
     ServicoComponent,
     ClienteComponent,
     ColaboradorComponent,
+    VendasComponent,
     MenuComponent
    ],
   imports: [

@@ -1,3 +1,20 @@
-<p>
-  vendas works!
-</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Venda</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let venda of vendas">
+      <td>{{venda.id}}</td>
+      <td>
+        <p><strong>{{ precoVenda(venda) | currency:'BRL'}}</strong></p>
+        <small>Data Cobrança: {{venda.dataCobranca | date:'dd/MM/yyyy'}}</small><br>
+        <small>Data Pagamento: {{venda.dataPagamento | date:'dd/MM/yyyy'}}</small><br>
+        <small>Colaborador: {{venda.colaborador}}</small><br>
+        <small>Cliente: {{venda.cliente ?? 'Cliente não identificado'}}</small>
+      </td>
+    </tr>
+  </tbody>
+</table>
