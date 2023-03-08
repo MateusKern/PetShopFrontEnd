@@ -13,7 +13,7 @@
         <small>{{cliente.telefone}} - {{cliente.email}} - {{cliente.cpf}}</small>
         <small>
           <div *ngFor="let pet of cliente.pets">
-          {{pet.tipo}} - {{pet.nome}} - {{pet.porte}} - {{pet.raca}} - {{pet.cor}}
+            {{retornaEmojiPet(pet.tipo)}} - {{pet.nome}} - {{pet.porte}} - {{pet.raca}} - {{pet.cor}}
           </div>
         </small>
       </td>

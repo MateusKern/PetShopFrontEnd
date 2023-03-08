@@ -23,15 +23,15 @@ export class ClienteComponent implements OnInit {
   retornaEmojiPet(tipo?: string): string {
     switch (tipo) {
       case 'Cachorro':
-        return '&#128054;';
+        return '🐶';
       case 'Gato':
-        return '&#128049;';
+        return '🐱';
       case 'Passaro':
-        return '&#128038;';
+        return '🐦';
       case 'Peixe':
-        return '&#128031;';
+        return '🐟';
       case 'Tartaruga':
-        return '&#128034;';
+        return '🐢';
       default:
         return 'pet';
     }
