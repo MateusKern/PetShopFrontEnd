@@ -20,4 +20,8 @@ export class ProdutoComponent implements OnInit {
     });
   }
 
+  novo() {
+    console.log('Novo Produto');
+  }
+
 }

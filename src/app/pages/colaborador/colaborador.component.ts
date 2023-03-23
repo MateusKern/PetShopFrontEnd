@@ -20,4 +20,8 @@ export class ColaboradorComponent implements OnInit {
     });
   }
 
+  novo() {
+    console.log('Novo Colaborador');
+  }
+
 }

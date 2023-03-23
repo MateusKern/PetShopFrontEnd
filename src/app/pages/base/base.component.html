@@ -17,7 +17,10 @@
     </nav>
     <div class="card">
       <div class="card-header">
-        {{titulo}}
+        <span>{{titulo}}</span>
+        <div *ngIf="mostraBotaoNovo" class="float-end">
+          <button class="btn btn-success" (click)="clickBotaoNovo()">Novo</button>
+        </div>
       </div>
       <div class="card-body">
         <router-outlet></router-outlet>

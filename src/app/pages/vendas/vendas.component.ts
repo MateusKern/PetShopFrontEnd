@@ -31,4 +31,8 @@ export class VendasComponent implements OnInit {
 
     return preco
   }
+
+  novo() {
+    console.log('Nova Venda');
+  }
 }

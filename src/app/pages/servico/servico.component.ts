@@ -20,4 +20,8 @@ export class ServicoComponent implements OnInit {
     });
   }
 
+  novo() {
+    console.log('Novo Serviço');
+  }
+
 }

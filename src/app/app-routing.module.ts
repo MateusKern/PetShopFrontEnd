@@ -16,13 +16,13 @@ import { VendasComponent } from "./pages/vendas/vendas.component";
 const routes: Routes = [
   { path: rotas.login, component: LoginComponent },
   { path: '', component: BaseComponent, canActivate: [AuthGuard], children: [
-    { path: rotas.home, component: HomeComponent, data: {titulo: 'Home'}},
-    { path: rotas.sobre, component: SobreComponent, data: {titulo: 'Sobre'} },
-    { path: rotas.produtos, component: ProdutoComponent, data: {titulo: 'Produtos'} },
-    { path: rotas.servicos, component: ServicoComponent, data: {titulo: 'Serviços'} },
-    { path: rotas.clientes, component: ClienteComponent, data: {titulo: 'Clientes'} },
-    { path: rotas.colaboradores, component: ColaboradorComponent, data: {titulo: 'Colaboradores'} },
-    { path: rotas.vendas, component: VendasComponent, data: {titulo: 'Vendas'} },
+    { path: rotas.home, component: HomeComponent, data: {titulo: 'Home', mostraBotaoNovo: false}},
+    { path: rotas.sobre, component: SobreComponent, data: {titulo: 'Sobre', mostraBotaoNovo: false} },
+    { path: rotas.produtos, component: ProdutoComponent, data: {titulo: 'Produtos', mostraBotaoNovo: true} },
+    { path: rotas.servicos, component: ServicoComponent, data: {titulo: 'Serviços', mostraBotaoNovo: true} },
+    { path: rotas.clientes, component: ClienteComponent, data: {titulo: 'Clientes', mostraBotaoNovo: true} },
+    { path: rotas.colaboradores, component: ColaboradorComponent, data: {titulo: 'Colaboradores', mostraBotaoNovo: true} },
+    { path: rotas.vendas, component: VendasComponent, data: {titulo: 'Vendas', mostraBotaoNovo: true} },
     { path: '', redirectTo: rotas.home, pathMatch: 'full' }
   ]}
 ]

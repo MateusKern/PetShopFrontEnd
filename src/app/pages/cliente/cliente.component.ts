@@ -36,4 +36,8 @@ export class ClienteComponent implements OnInit {
         return 'pet';
     }
   }
+
+  novo() {
+    console.log('Novo Cliente');
+  }
 }
